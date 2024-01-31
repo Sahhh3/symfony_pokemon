@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 1000px; width: 95%; font: 18px/1.5 sans-serif; align-items:center; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Bienvenue dans mon pokedex réalisé en symfony !</h1>
+    <img id="logo_pokemon" src="{{ asset('assets/pokemon.png') }}" alt="Pokedex">
+    <p>Voici les différents fonctionnalités:</p>
+    <ul>
+        <li>Consulter le pokédex des 151 premiers pokémons.</li>
+        <li>Se connecter afin d'enregister vos pokémons favoris ou créer une équipe.</li>
+    </ul>
+</div>
+{% endblock %}

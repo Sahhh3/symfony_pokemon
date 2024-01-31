@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ListePokemonController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Voici la liste des pokémons :</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Nom</th>
+                <th>Description</th>
+                <th>Type 1</th>
+                <th>Type 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pokemon in pokemons %}
+                <tr>
+                    <td><img src="{{ asset('assets/pokemons/' ~ pokemon.nom ~ '.png') }}" alt="{{ pokemon.nom }}"></td>
+                    <td>{{ pokemon.nom }}</td>
+                    <td>{{ pokemon.description }}</td>
+                    <td><img src="{{ asset('assets/type_images/' ~ pokemon.type1 ~ '.webp') }}" alt="{{ pokemon.type1 }}"></td>
+                    <td><img src="{{ asset('assets/type_images/' ~ pokemon.type2 ~ '.webp') }}" alt="{{ pokemon.type2 }}"></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+{% endblock %}

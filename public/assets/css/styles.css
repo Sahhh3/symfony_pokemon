@@ -1,0 +1,32 @@
+/* styles.css */
+
+nav {
+    height: 7%;
+    background-color: black;
+    display: flex; /* Utiliser Flexbox pour aligner les éléments */
+    justify-content: space-between; /* Espace entre les éléments */
+    align-items: center; /* Aligner verticalement au centre */
+}
+
+#logo_pokedex {
+    width: 20%;
+    margin-left: 10%;
+}
+
+#lien_nav {
+    text-align: right;
+    margin-right: 5%;
+}
+
+#lien_nav > a {
+    font-size: 36px;
+    margin-right: 30px; /* Ajuster la marge gauche si nécessaire */
+    color: white;
+    text-decoration: none; 
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+#logo_pokemon{
+    max-width:85%;
+}
